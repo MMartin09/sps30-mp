@@ -3,7 +3,7 @@ import time
 
 
 class Measurement:
-    """ Helper class representing a single measurement of the device.
+    """Helper class representing a single measurement of the device.
 
     See the documentation for more information.
 
@@ -46,7 +46,7 @@ class Measurement:
 
 
 class StatusRegister:
-    """ Helper class representing the available attributes of the device status register.
+    """Helper class representing the available attributes of the device status register.
 
     See the documentation for more information.
 

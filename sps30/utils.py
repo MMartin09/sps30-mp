@@ -2,7 +2,7 @@ from sps30.models import StatusRegister
 
 
 def reverse_byte_stuffing(raw_data: bytes) -> bytes:
-    """ Apply reverse byte-stuffing on an input byte string.
+    """Apply reverse byte-stuffing on an input byte string.
 
     See the documentation for more information.
 
@@ -27,7 +27,7 @@ def reverse_byte_stuffing(raw_data: bytes) -> bytes:
 
 
 def trim_data(raw_data: bytes) -> bytes:
-    """ Removes head and tail from byte string.
+    """Removes head and tail from byte string.
 
     Args:
         raw_data: Input bytes to be trimmed.
@@ -41,7 +41,7 @@ def trim_data(raw_data: bytes) -> bytes:
 
 
 def transform_data(raw_data: bytes) -> bytes:
-    """ Transform raw input byte string.
+    """Transform raw input byte string.
 
     Apply inverse byte stuffing and remove head and tail characters.
 
@@ -60,7 +60,7 @@ def transform_data(raw_data: bytes) -> bytes:
 
 
 def is_set(n: int, b: int) -> int:
-    """ Checks if a bit is set.
+    """Checks if a bit is set.
 
     Args:
         n: Input number.
@@ -73,7 +73,7 @@ def is_set(n: int, b: int) -> int:
 
 
 def parse_status_register(register) -> StatusRegister:
-    """ Parse the status register into a dict.
+    """Parse the status register into a dict.
 
     See the class definition of StatusRegister for more information.
 
