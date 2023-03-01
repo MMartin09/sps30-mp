@@ -30,8 +30,31 @@ response_time = {
 
 
 class SPS30:
-    def __init__(self) -> None:
-        self.conn = UART(1, baudrate=115200, parity=None, stop=1, tx=Pin(4), rx=Pin(5))
+    """SPS30 main class.
+
+    The default values of the constructor are selected in such a way that they match the configuration of the SPS30 device.
+    Thus for default it is enough to only provide the id and connection pins.
+
+    Args:
+        id: Uart id
+        tx: Tx Pin
+        rx: Rx Pin
+        baudrate: Clock rate. Defaults to 115200.
+        parity: Data parity. Defaults to None.
+        stop: Number of stop bits. Defaults to 1.
+
+    """
+
+    def __init__(
+        self,
+        id: int,
+        tx: Pin,
+        rx: Pin,
+        baudrate: int = 115200,
+        parity: int | None = None,
+        stop: int = 1,
+    ) -> None:
+        self.conn = UART(id, baudrate=baudrate, parity=parity, stop=stop, tx=tx, rx=rx)
 
     def start_measurement(self):
         data = data_frame["start_measurement"]
