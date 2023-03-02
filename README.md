@@ -35,16 +35,16 @@ if __name__ == "__main__":
     main()
 ```
 
-In this example, the *UART1* interface of the Pico is used with port `GP4` for the *TX* and port `GP5` for the *RX* line. 
+In this example, the *UART1* interface of the Pico is used with port `GP4` for the *TX* and port `GP5` for the *RX* line.
 
 ## Useful information
 
 **Pinout diagram of the Raspberry Pi Pico W**
 
-The image is taken from the official [documentation](https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html). 
+The image is taken from the official [documentation](https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html).
 
 <p align="center">
-<img src="/assets/pico_pinout.png" alt="Raspberry Pi Pico W Pinout" title="Raspberry Pi Pico W Pinout" style="width: 800px">
+<img src="/assets/pico_w_pinout.png" alt="Raspberry Pi Pico W Pinout" title="Raspberry Pi Pico W Pinout" style="width: 800px">
 </p>
 
 ## Contribution notes
@@ -55,6 +55,19 @@ To install the required dependencies including the *dev* packages run:
 ```bash
 poetry install
 ```
+
+**Pre-commit**
+
+[pre-commit](https://pre-commit.com) is listed as a *dev*-dependency and automatically installed with Poetry.
+To enable the defined hooks run `pre-commit install`.
+After the hooks are enabled they are automatically triggered every time when `git commit` is executed and run against changed files.
+
+**Code formatting**
+
+The project uses [black](https://github.com/psf/black) for code formatting and [isort](https://pycqa.github.io/isort/) for a correct sorting of imports.
+A configured Github Action validates the code style on every push.
+If there is a violation in the code formatting the workflow will fail (this would for example block a PR).
+When the *pre-commit* hooks are active these checks are done locally before the commit is completed which prevents committing code that is not correctly formatted.
 
 **Build the package:**
 
