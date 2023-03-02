@@ -16,7 +16,6 @@ from time import sleep
 from sps30 import SPS30
 
 
-
 def main() -> None:
     sps30 = SPS30(id=1, tx=Pin(4), rx=Pin(5))
 
@@ -35,6 +34,8 @@ def main() -> None:
 if __name__ == "__main__":
     main()
 ```
+
+<img src="/assets/pico_pinout.png" alt="Raspberry Pi Pico Pinout" title="Raspberry Pi Pico Pinout" style="display: inline-block; margin: 0 auto; max-width: 300px">
 
 ## Contribution notes
 
