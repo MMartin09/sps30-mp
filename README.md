@@ -35,7 +35,17 @@ if __name__ == "__main__":
     main()
 ```
 
-<img src="/assets/pico_pinout.png" alt="Raspberry Pi Pico Pinout" title="Raspberry Pi Pico Pinout" style="display: inline-block; margin: 0 auto; max-width: 300px">
+In this example, the *UART1* interface of the Pico is used with port `GP4` for the *TX* and port `GP5` for the *RX* line. 
+
+## Useful information
+
+**Pinout diagram of the Raspberry Pi Pico W**
+
+The image is taken from the official [documentation](https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html). 
+
+<p align="center">
+<img src="/assets/pico_pinout.png" alt="Raspberry Pi Pico W Pinout" title="Raspberry Pi Pico W Pinout" style="width: 800px">
+</p>
 
 ## Contribution notes
 
