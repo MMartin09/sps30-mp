@@ -57,6 +57,7 @@ class SPS30:
         self.conn = UART(id, baudrate=baudrate, parity=parity, stop=stop, tx=tx, rx=rx)
 
     def start_measurement(self):
+        """Starts the measurement mode."""
         data = data_frame["start_measurement"]
 
         self._tx(data)
@@ -64,6 +65,7 @@ class SPS30:
         self._rx(byte_cnt=7)
 
     def stop_measurement(self):
+        """Stops the measurement mode. Device switches back into IDLE mode."""
         data = data_frame["stop_measurement"]
 
         self._tx(data)
@@ -71,6 +73,13 @@ class SPS30:
         self._rx(byte_cnt=7)
 
     def read_measurement(self) -> Measurement:
+        """Reads the current sensor values.
+
+        Returns:
+            Sensor values as Measurement object.
+
+        """
+
         data = data_frame["read_measurement"]
 
         self._tx(data)
